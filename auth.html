@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="auth.css">
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js"></script>
+    <title>Aghamenon Toberlock Estudos</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Criar uma Conta</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <span>ou use seu e-mail para cadastro</span>
+                <input type="text" placeholder="Nome de Usuário">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Senha">
+                <button>Registrar</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Entrar</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <span>ou use email e senha para entrar</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Senha">
+                <a href="#">Esqueceu sua senha?</a>
+                <button>Entrar</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bem-vindo de volta!</h1>
+                    <p>Faça login em sua conta para acessar todos os recursos do nosso site.</p>
+                    <button class="hidden" id="login">Entrar</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Olá Estudante!</h1>
+                    <p>Caso não tenha uma conta, registre-se para acessar todos os recursos do nosso site.</p>
+                    <button class="hidden" id="register">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script src="firebase-auth.js"></script>
+</body>
+
+</html>
