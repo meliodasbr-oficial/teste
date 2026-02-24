@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aghamenon Toberlock Estudos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+
+<div class="scroll-progress" aria-hidden="true">
+  <div class="scroll-progress__bar" id="scrollBar"></div>
+</div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="#top">
+      <span class="brand__mark" style="color: white;">AT</span>
+      <span class="brand__name">Aghamenon Toberlock <span class="muted">Estudos</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Navegação principal">
+  <a class="nav__link" href="#ofertas">O que oferecemos</a>
+  <a class="nav__link" href="#comentarios">Comentários</a>
+  <a class="nav__link" href="#faq">FAQ</a>
+
+  <!-- ✅ Configurações (substitui o themeToggle) -->
+  <div class="settings settings--nav">
+    <button class="icon-btn" id="openSettingsHeader" type="button" aria-label="Configurações" aria-expanded="false">
+      <span class="icon-btn__ic" aria-hidden="true">⚙️</span>
+    </button>
+
+    <div class="settings__menu" id="settingsMenuHeader" hidden>
+      <div class="settings__title">Configurações</div>
+
+      <button class="theme-row" id="themeRowBtnHeader" type="button">
+        <div>
+          <b id="themeActionTextHeader">Tema Escuro</b>
+          <div class="tiny muted">Alternar aparência</div>
+        </div>
+
+        <span class="switch">
+          <input id="themeSwitchHeader" type="checkbox" />
+          <span class="switch__track" aria-hidden="true"></span>
+          <span class="switch__thumb" aria-hidden="true"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <button class="btn btn--primary" id="openAuth" type="button">Entrar</button>
+</nav>
+
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile" id="mobileMenu" hidden>
+  <div class="container mobile__inner">
+    <a href="#ofertas" class="mobile__link">O que oferecemos</a>
+    <a href="#comentarios" class="mobile__link">Comentários</a>
+    <a href="#faq" class="mobile__link">FAQ</a>
+
+    <!-- ✅ Configurações no mobile -->
+    <div class="settings settings--mobile">
+      <button class="mobile__link" id="openSettingsMobile" type="button" aria-expanded="false">
+        ⚙️ Configurações
+      </button>
+
+      <div class="settings__menu settings__menu--mobile" id="settingsMenuMobile" hidden>
+        <div class="settings__title">Configurações</div>
+
+        <button class="theme-row" id="themeRowBtnMobile" type="button">
+          <div>
+            <b id="themeActionTextMobile">Tema Escuro</b>
+            <div class="tiny muted">Alternar aparência</div>
+          </div>
+
+          <span class="switch">
+            <input id="themeSwitchMobile" type="checkbox" />
+            <span class="switch__track" aria-hidden="true"></span>
+            <span class="switch__thumb" aria-hidden="true"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <button class="mobile__link" id="openAuthMobile" type="button">Entrar / Criar conta</button>
+  </div>
+</div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy reveal">
+        <div class="pill"><span class="dot"></span> Plataforma ampla: ENEM • Concursos • Escola • Faculdade</div>
+        <h1>Estude com foco, <span class="gradient">progresso real</span> e motivação diária.</h1>
+        <p class="lead">
+          Simulados (gratuitos e premium), ranking, missões, apostilas e acompanhamento do desempenho —
+          tudo para você evoluir mais rápido.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#ofertas">Ver recursos</a>
+          <button class="btn btn--ghost" id="openAuthHero" type="button">Criar conta</button>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__kpi">Simulados</span>
+            <span class="stat__desc">Por área, tema e banca</span>
+          </div>
+          <div class="stat">
+            <span class="stat__kpi">Progresso</span>
+            <span class="stat__desc">Dados claros por desempenho</span>
+          </div>
+          <div class="stat">
+            <span class="stat__kpi">Motivação</span>
+            <span class="stat__desc">Missões + ranking</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal">
+        <div class="mock" aria-label="Prévia do painel">
+          <div class="mock__top">
+            <span class="chip">Progresso</span>
+            <span class="chip chip--soft">Missões</span>
+            <span class="chip chip--soft">Ranking</span>
+          </div>
+
+          <div class="mock__card">
+            <div class="mock__row">
+              <div>
+                <div class="mock__title">Painel do aluno</div>
+                <div class="mock__sub">Acompanhe acertos, tempo e evolução</div>
+              </div>
+              <span class="badge">+12%</span>
+            </div>
+
+            <div class="bars" aria-hidden="true">
+              <span style="height:18%"></span>
+              <span style="height:42%"></span>
+              <span style="height:30%"></span>
+              <span style="height:58%"></span>
+              <span style="height:46%"></span>
+              <span style="height:72%"></span>
+              <span style="height:62%"></span>
+            </div>
+            <div class="mock__hint">Exemplo ilustrativo</div>
+          </div>
+
+          <div class="mock__grid">
+            <div class="mini">
+              <div class="mini__kpi">Simulados</div>
+              <div class="mini__val">24</div>
+              <div class="mini__desc">feitos no mês</div>
+            </div>
+            <div class="mini">
+              <div class="mini__kpi">Acerto</div>
+              <div class="mini__val">78%</div>
+              <div class="mini__desc">média</div>
+            </div>
+            <div class="mini">
+              <div class="mini__kpi">Ranking</div>
+              <div class="mini__val">#14</div>
+              <div class="mini__desc">na disputa</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__fade" aria-hidden="true"></div>
+  </section>
+
+  <!-- OFERTAS (cards rápidos) -->
+  <section class="section section--soft" id="ofertas">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2>O que oferecemos</h2>
+        <p>Recursos para aprender, revisar, treinar e acompanhar evolução — em uma plataforma única.</p>
+      </div>
+
+      <div class="grid-3 reveal">
+        <article class="card">
+          <h3>Simulados</h3>
+          <p>Gratuitos e pagos, por área, tema e tipo de prova (escola, faculdade, ENEM e concursos).</p>
+          <span class="tag">Treino objetivo</span>
+        </article>
+
+        <article class="card">
+          <h3>Ranking & Disputa</h3>
+          <p>Competição saudável para manter constância e aumentar o ritmo com metas semanais.</p>
+          <span class="tag tag--soft">Motivação</span>
+        </article>
+
+        <article class="card">
+          <h3>Apostilas</h3>
+          <p>Materiais gratuitos e premium para revisar rápido e estudar com foco no que cai.</p>
+          <span class="tag">Conteúdo</span>
+        </article>
+      </div>
+
+      <div class="steps reveal" style="margin-top:14px;">
+        <div class="step">
+          <div class="step__n">1</div>
+          <div>
+            <h3>Escolha o objetivo</h3>
+            <p>ENEM, concurso, escola ou faculdade. O sistema organiza seu caminho.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__n">2</div>
+          <div>
+            <h3>Treine com simulados</h3>
+            <p>Questões com foco, revisão e estatísticas por tema.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__n">3</div>
+          <div>
+            <h3>Veja o progresso</h3>
+            <p>Entenda seus pontos fracos e melhore mais rápido.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES por rolagem -->
+  <section class="feature" id="simulados">
+    <div class="container feature__grid">
+      <div class="reveal">
+        <div class="kicker">SIMULADOS</div>
+        <h2>Simulados gratuitos e premium, do jeito que cai.</h2>
+        <p class="lead2">
+          Simulados por área e nível: ensino médio, faculdade, ENEM e concursos.
+          Com explicações, estatísticas e histórico.
+        </p>
+        <ul class="list">
+          <li><span class="bullet"></span> Filtros por tema, nível e objetivo</li>
+          <li><span class="bullet"></span> Correção instantânea + gabarito</li>
+          <li><span class="bullet"></span> Histórico e evolução por assunto</li>
+        </ul>
+        <div class="feature__actions">
+          <a class="btn btn--primary" href="#missões">Ver missões</a>
+          <button class="btn btn--ghost" id="openAuthSimulados" type="button">Começar agora</button>
+        </div>
+      </div>
+
+      <div class="panel reveal">
+        <div class="panel__head">
+          <div>
+            <div class="panel__title">Desempenho por tema</div>
+            <div class="panel__sub">Exemplo ilustrativo</div>
+          </div>
+          <span class="pill2">Mês atual</span>
+        </div>
+        <div class="panel__body">
+          <div class="meter">
+            <span>Matemática</span>
+            <div class="meter__bar"><i style="width:72%"></i></div>
+            <span>72%</span>
+          </div>
+          <div class="meter">
+            <span>Português</span>
+            <div class="meter__bar"><i style="width:66%"></i></div>
+            <span>66%</span>
+          </div>
+          <div class="meter">
+            <span>Humanas</span>
+            <div class="meter__bar"><i style="width:58%"></i></div>
+            <span>58%</span>
+          </div>
+
+          <div class="panel__grid">
+            <div class="box">
+              <div class="box__kpi">Simulados</div>
+              <div class="box__val">8</div>
+            </div>
+            <div class="box">
+              <div class="box__kpi">Questões</div>
+              <div class="box__val">120</div>
+            </div>
+            <div class="box">
+              <div class="box__kpi">Tempo</div>
+              <div class="box__val">4h</div>
+            </div>
+          </div>
+          <div class="hint">Dados ilustrativos para mockup.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature feature--alt" id="ranking">
+    <div class="container feature__grid">
+      <div class="panel reveal">
+        <div class="panel__head">
+          <div>
+            <div class="panel__title">Ranking semanal</div>
+            <div class="panel__sub">Disputa saudável</div>
+          </div>
+          <span class="pill2 pill2--soft">Top 5</span>
+        </div>
+        <div class="panel__body">
+          <ol class="rank">
+            <li><span class="rank__pos">1</span><span class="rank__name">Gabriel</span><span class="rank__pts">980</span></li>
+            <li><span class="rank__pos">2</span><span class="rank__name">Sofia</span><span class="rank__pts">920</span></li>
+            <li><span class="rank__pos">3</span><span class="rank__name">Mariana</span><span class="rank__pts">870</span></li>
+            <li><span class="rank__pos">4</span><span class="rank__name">João</span><span class="rank__pts">820</span></li>
+            <li class="rank__me"><span class="rank__pos">14</span><span class="rank__name">Você</span><span class="rank__pts">540</span></li>
+          </ol>
+          <div class="hint">Exemplo do ranking no mockup.</div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="kicker">RANKING</div>
+        <h2>Disputa que te mantém constante.</h2>
+        <p class="lead2">
+          Suba no ranking concluindo missões, fazendo simulados e mantendo consistência. Você compete
+          por pontos e evolui no seu próprio ritmo.
+        </p>
+        <ul class="list">
+          <li><span class="bullet"></span> Pontos por missão e simulado</li>
+          <li><span class="bullet"></span> Badges e conquistas</li>
+          <li><span class="bullet"></span> Histórico semanal</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature" id="comunidade">
+    <div class="container feature__grid">
+      <div class="reveal">
+        <div class="kicker">COMUNIDADE</div>
+        <h2>Chat para interagir e tirar dúvidas.</h2>
+        <p class="lead2">
+          Converse com pessoas que estão estudando as mesmas coisas: ENEM, concursos, escola e faculdade.
+          Troque dicas, estratégias e materiais.
+        </p>
+        <ul class="list">
+          <li><span class="bullet"></span> Canais por tema/área</li>
+          <li><span class="bullet"></span> Mensagens rápidas</li>
+          <li><span class="bullet"></span> Sem foco em uma única área: plataforma ampla</li>
+        </ul>
+      </div>
+
+      <div class="panel reveal">
+        <div class="panel__head">
+          <div>
+            <div class="panel__title">Chat (mockup)</div>
+            <div class="panel__sub">Exemplo ilustrativo</div>
+          </div>
+          <span class="pill2">Online</span>
+        </div>
+        <div class="panel__body">
+          <div class="chat">
+            <div class="msg"><b>Sofia:</b> alguém tem dica pra revisar redação?</div>
+            <div class="msg"><b>João:</b> fiz 2 simulados hoje, subi no ranking 😄</div>
+            <div class="msg"><b>Mariana:</b> tô montando cronograma pra provas da facul</div>
+          </div>
+          <div class="hint">Exemplo do chat no mockup.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature feature--alt" id="suporte">
+    <div class="container feature__grid">
+      <div class="panel reveal">
+        <div class="panel__head">
+          <div>
+            <div class="panel__title">Suporte</div>
+            <div class="panel__sub">Retorno em até 24h</div>
+          </div>
+          <span class="pill2 pill2--soft">Ticket</span>
+        </div>
+        <div class="panel__body">
+          <div class="ticket">
+            <b>Problema:</b> Não consigo acessar um simulado premium<br/>
+            <span class="tiny muted">Status: Em análise</span>
+          </div>
+          <div class="ticket">
+            <b>Dúvida:</b> Como ver meu desempenho por tema?<br/>
+            <span class="tiny muted">Status: Respondido</span>
+          </div>
+          <div class="hint">Exemplo do suporte no mockup.</div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="kicker">SUPORTE</div>
+        <h2>Suporte com retorno em até 24h.</h2>
+        <p class="lead2">
+          Um canal dedicado para resolver problemas e dúvidas rapidamente. Você abre um ticket e acompanha o status.
+        </p>
+        <ul class="list">
+          <li><span class="bullet"></span> Atendimento organizado</li>
+          <li><span class="bullet"></span> Histórico de respostas</li>
+          <li><span class="bullet"></span> Retorno em até 24h</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature" id="biblioteca">
+    <div class="container feature__grid">
+      <div class="reveal">
+        <div class="kicker">BIBLIOTECA</div>
+        <h2>Apostilas gratuitas e premium.</h2>
+        <p class="lead2">
+          Materiais por tema e objetivo. Você baixa, revisa e treina com questões relacionadas.
+        </p>
+        <ul class="list">
+          <li><span class="bullet"></span> Conteúdo rápido e direto</li>
+          <li><span class="bullet"></span> Organização por assunto</li>
+          <li><span class="bullet"></span> Atualizações constantes</li>
+        </ul>
+      </div>
+
+      <div class="panel reveal">
+        <div class="panel__head">
+          <div>
+            <div class="panel__title">Biblioteca (mockup)</div>
+            <div class="panel__sub">Exemplo ilustrativo</div>
+          </div>
+          <span class="pill2">PDF</span>
+        </div>
+        <div class="panel__body">
+          <div class="library">
+            <div class="doc"><span class="doc__ic">📘</span> Revisão: Matemática básica <span class="tiny muted">(gratuito)</span></div>
+            <div class="doc"><span class="doc__ic">📗</span> Redação: estruturas + modelos <span class="tiny muted">(premium)</span></div>
+            <div class="doc"><span class="doc__ic">📙</span> Humanas: linha do tempo <span class="tiny muted">(gratuito)</span></div>
+          </div>
+          <div class="hint">Exemplo da biblioteca no mockup.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature feature--alt" id="progresso">
+    <div class="container feature__grid">
+      <div class="panel reveal">
+        <div class="panel__head">
+          <div>
+            <div class="panel__title">Progresso</div>
+            <div class="panel__sub">Acompanhe sua evolução</div>
+          </div>
+          <span class="pill2 pill2--soft">Dashboard</span>
+        </div>
+        <div class="panel__body">
+          <div class="split">
+            <div class="split__item">
+              <div class="tiny muted">Precisão</div>
+              <div style="font-size:24px;font-weight:900;">78%</div>
+            </div>
+            <div class="split__item">
+              <div class="tiny muted">Constância</div>
+              <div style="font-size:24px;font-weight:900;">6 dias</div>
+            </div>
+          </div>
+          <div class="hint">Exemplo de indicadores no mockup.</div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="kicker">PROGRESSO</div>
+        <h2>Veja onde melhorar e o que manter.</h2>
+        <p class="lead2">
+          Desempenho por tema, evolução semanal e visão clara do que está funcionando.
+        </p>
+        <ul class="list">
+          <li><span class="bullet"></span> Histórico de simulados</li>
+          <li><span class="bullet"></span> Gráficos e percentuais</li>
+          <li><span class="bullet"></span> Relatório de erros mais comuns</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature" id="missões">
+    <div class="container feature__grid">
+      <div class="reveal">
+        <div class="kicker">MISSÕES</div>
+        <h2>Missões diárias para manter o ritmo.</h2>
+        <p class="lead2">
+          Pequenas metas com pontuação: concluir missão = ganhar pontos e subir no ranking.
+        </p>
+        <ul class="list">
+          <li><span class="bullet"></span> Missões curtas e objetivas</li>
+          <li><span class="bullet"></span> Recompensas por constância</li>
+          <li><span class="bullet"></span> Ajuda a não procrastinar</li>
+        </ul>
+      </div>
+
+      <div class="panel reveal">
+        <div class="panel__head">
+          <div>
+            <div class="panel__title">Missões (mockup)</div>
+            <div class="panel__sub">Exemplo ilustrativo</div>
+          </div>
+          <span class="pill2">Hoje</span>
+        </div>
+        <div class="panel__body">
+          <div class="mission"><span>✅ Fazer 10 questões</span><span class="tiny muted">+50</span></div>
+          <div class="mission"><span>⬜ Revisar 1 apostila</span><span class="tiny muted">+40</span></div>
+          <div class="mission"><span>⬜ Fazer 1 simulado</span><span class="tiny muted">+100</span></div>
+          <div class="hint">Exemplo das missões no mockup.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANOS (abaixo das missões) -->
+  <section class="section section--soft" id="planos">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2>Planos acessíveis</h2>
+        <p>Assine mensalmente e desbloqueie a plataforma completa. Pagamentos via PIX.</p>
+      </div>
+
+      <div class="pricing reveal">
+        <div class="price-card">
+          <div class="price-card__top">
+            <h3>Gratuito</h3>
+            <p class="muted">Conta limitada • sem pagamento</p>
+          </div>
+          <div class="price">
+            <div class="price__value">R$ 0</div>
+            <div class="price__cycle">para começar</div>
+          </div>
+          <ul class="check">
+            <li>Simulados grátis selecionados</li>
+            <li>Apostilas grátis selecionadas</li>
+            <li>Progresso básico</li>
+          </ul>
+          <button class="btn btn--full" data-open-auth="true">Criar conta</button>
+        </div>
+
+        <div class="price-card price-card--featured">
+          <div class="price-card__top">
+            <h3>Premium</h3>
+            <p class="muted">Acesso completo • via PIX</p>
+          </div>
+          <div class="price">
+            <div class="price__value">R$ 19,90</div>
+            <div class="price__cycle">/ 1 mês</div>
+          </div>
+          <ul class="check">
+            <li>Simulados premium</li>
+            <li>Apostilas premium</li>
+            <li>Ranking completo</li>
+          </ul>
+          <a class="btn btn--primary btn--full" href="pagamento.html?plano=premium_1m">Assinar</a>
+        </div>
+
+        <div class="price-card">
+          <div class="price-card__top">
+            <h3>Premium Plus</h3>
+            <p class="muted">Prioridade • via PIX</p>
+          </div>
+          <div class="price">
+            <div class="price__value">R$ 29,90</div>
+            <div class="price__cycle">/ 1 mês</div>
+          </div>
+          <ul class="check">
+            <li>Todos recursos premium</li>
+            <li>Suporte prioritário</li>
+            <li>Mais missões e desafios</li>
+          </ul>
+          <a class="btn btn--full" href="pagamento.html?plano=premiumplus_1m">Assinar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ COMENTÁRIOS -->
+  <section class="section" id="comentarios">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2>Comentários</h2>
+        <p>O que a galera fala depois de estudar com constância + prática.</p>
+      </div>
+
+      <div class="marquee reveal" aria-label="Comentários em destaque">
+        <div class="marquee__track" id="commentsTrack">
+          <!-- Grupo A -->
+          <article class="tcard">
+            <div class="tcard__top">
+              <div class="avatar">A</div>
+              <div>
+                <b>Ana</b>
+                <div class="tiny muted">ENEM • rotina diária</div>
+              </div>
+              <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            </div>
+            <p class="muted">“As missões e o ranking me fizeram estudar todo dia sem perceber.”</p>
+          </article>
+
+          <article class="tcard">
+            <div class="tcard__top">
+              <div class="avatar">J</div>
+              <div>
+                <b>João</b>
+                <div class="tiny muted">Concurso • banca</div>
+              </div>
+              <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            </div>
+            <p class="muted">“Simulado por banca mudou o jogo. Agora eu sei exatamente onde focar.”</p>
+          </article>
+
+          <article class="tcard">
+            <div class="tcard__top">
+              <div class="avatar">M</div>
+              <div>
+                <b>Mariana</b>
+                <div class="tiny muted">Faculdade • provas</div>
+              </div>
+              <div class="stars" aria-label="4 estrelas">★★★★☆</div>
+            </div>
+            <p class="muted">“Material por tema acelera demais a revisão. Ficou tudo organizado.”</p>
+          </article>
+
+          <article class="tcard">
+            <div class="tcard__top">
+              <div class="avatar">L</div>
+              <div>
+                <b>Lucas</b>
+                <div class="tiny muted">Ensino médio</div>
+              </div>
+              <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            </div>
+            <p class="muted">“O progresso mostra o que tô errando, aí eu paro de perder tempo.”</p>
+          </article>
+
+          <article class="tcard">
+            <div class="tcard__top">
+              <div class="avatar">S</div>
+              <div>
+                <b>Sofia</b>
+                <div class="tiny muted">Concursos</div>
+              </div>
+              <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            </div>
+            <p class="muted">“Ranking dá motivação real. Eu virei constante de verdade.”</p>
+          </article>
+
+          <!-- Grupo B (duplicado para loop perfeito) -->
+          <article class="tcard" aria-hidden="true">
+            <div class="tcard__top">
+              <div class="avatar">A</div>
+              <div>
+                <b>Ana</b>
+                <div class="tiny muted">ENEM • rotina diária</div>
+              </div>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p class="muted">“As missões e o ranking me fizeram estudar todo dia sem perceber.”</p>
+          </article>
+
+          <article class="tcard" aria-hidden="true">
+            <div class="tcard__top">
+              <div class="avatar">J</div>
+              <div>
+                <b>João</b>
+                <div class="tiny muted">Concurso • banca</div>
+              </div>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p class="muted">“Simulado por banca mudou o jogo. Agora eu sei exatamente onde focar.”</p>
+          </article>
+
+          <article class="tcard" aria-hidden="true">
+            <div class="tcard__top">
+              <div class="avatar">M</div>
+              <div>
+                <b>Mariana</b>
+                <div class="tiny muted">Faculdade • provas</div>
+              </div>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <p class="muted">“Material por tema acelera demais a revisão. Ficou tudo organizado.”</p>
+          </article>
+
+          <article class="tcard" aria-hidden="true">
+            <div class="tcard__top">
+              <div class="avatar">L</div>
+              <div>
+                <b>Lucas</b>
+                <div class="tiny muted">Ensino médio</div>
+              </div>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p class="muted">“O progresso mostra o que tô errando, aí eu paro de perder tempo.”</p>
+          </article>
+
+          <article class="tcard" aria-hidden="true">
+            <div class="tcard__top">
+              <div class="avatar">S</div>
+              <div>
+                <b>Sofia</b>
+                <div class="tiny muted">Concursos</div>
+              </div>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p class="muted">“Ranking dá motivação real. Eu virei constante de verdade.”</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="comments-actions reveal">
+        <a class="btn btn--ghost" href="comentarios.html">Mais comentários</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--soft" id="faq">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2>FAQ</h2>
+        <p>Respostas rápidas antes de começar.</p>
+      </div>
+
+      <div class="faq reveal">
+        <details class="faq__item">
+          <summary>O plano gratuito tem limite?</summary>
+          <p>Sim. Ele libera apenas uma parte de simulados e materiais. Para acesso total, use Premium/Premium Plus.</p>
+        </details>
+
+        <details class="faq__item">
+          <summary>Como funciona o pagamento?</summary>
+          <p>Por enquanto, apenas PIX. Ao escolher um plano pago, você vai para a página de pagamento.</p>
+        </details>
+
+        <details class="faq__item">
+          <summary>O suporte responde em quanto tempo?</summary>
+          <p>Em até 24 horas.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta__box reveal">
+        <div>
+          <h2 style="margin:0 0 6px;">Pronto para evoluir de verdade?</h2>
+          <p class="muted" style="margin:0;">Crie sua conta grátis e comece hoje.</p>
+        </div>
+        <div class="cta__actions">
+          <button class="btn btn--primary" id="openAuthCta" type="button">Criar conta</button>
+          <a class="btn" href="#planos">Ver planos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="brand__mark" style="color: white;">AT</span>
+      <div>
+        <b>Aghamenon Toberlock Estudos</b>
+        <div class="tiny muted">© <span id="year"></span> • Todos os direitos reservados</div>
+      </div>
+    </div>
+    <div class="footer__links">
+      <a href="#top">Voltar ao topo</a>
+      <a href="#planos">Planos</a>
+      <a href="comentarios.html">Comentários</a>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTopBtn" type="button" aria-label="Voltar ao topo">↑</button>
+
+<!-- AUTH DIALOG -->
+<dialog class="auth" id="authDialog" aria-label="Entrar ou criar conta">
+  <div class="auth__panel">
+    <button class="auth__close" id="closeAuth" type="button" aria-label="Fechar">✕</button>
+
+    <div class="auth__head">
+      <div class="auth__brand">
+        <span class="brand__mark" style="color: white;">AT</span>
+        <div>
+          <b style="color: white;">Aghamenon Toberlock</b>
+          <div class="tiny muted">Entrar / Criar conta</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth__tabs">
+      <button class="tab is-active" id="tabLogin" type="button">Entrar</button>
+      <button class="tab" id="tabRegister" type="button">Criar conta</button>
+    </div>
+
+    <!-- LOGIN -->
+    <section class="auth__content is-active" id="loginPane">
+      <div class="grid-2">
+        <div class="field">
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" type="email" placeholder="seuemail@exemplo.com" autocomplete="email" />
+        </div>
+          <div class="field">
+            <label for="loginPass">Senha</label>
+
+            <div class="pass">
+              <input id="loginPass" type="password" placeholder="Sua senha" autocomplete="current-password" />
+<button class="pass__btn" type="button" data-toggle-pass="loginPass" aria-label="Mostrar senha" data-pass-state="hidden">
+  <span class="pass__ic" aria-hidden="true"></span>
+</button>
+            </div>
+          </div>
+      </div>
+      <button class="btn btn--primary btn--full" id="doLogin" type="button">Entrar</button>
+      <p class="tiny muted" style="margin:10px 0 0;">* Mockup: aqui você liga no seu backend depois.</p>
+    </section>
+
+    <!-- REGISTER -->
+    <section class="auth__content" id="registerPane">
+      <div class="grid-2">
+        <div class="field">
+          <label for="regName">Nome</label>
+          <input id="regName" type="text" placeholder="Seu nome" autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="regEmail">Email</label>
+          <input id="regEmail" type="email" placeholder="seuemail@exemplo.com" autocomplete="email" />
+        </div>
+        <div class="field">
+  <label for="regPass">Senha</label>
+
+  <div class="pass">
+    <input id="regPass" type="password" placeholder="Crie uma senha" autocomplete="new-password" />
+<button class="pass__btn" type="button" data-toggle-pass="regPass" aria-label="Mostrar senha" data-pass-state="hidden">
+  <span class="pass__ic" aria-hidden="true"></span>
+</button>
+  </div>
+</div>
+
+<div class="field">
+  <label for="regPass2">Confirmar senha</label>
+
+  <div class="pass">
+    <input id="regPass2" type="password" placeholder="Repita a senha" autocomplete="new-password" />
+<button class="pass__btn" type="button" data-toggle-pass="regPass2" aria-label="Mostrar senha" data-pass-state="hidden">
+  <span class="pass__ic" aria-hidden="true"></span>
+</button>
+  </div>
+</div>
+      </div>
+
+      <div class="plan-pick">
+        <div class="plan-pick__head">
+          <b style="color: white;">Escolha seu plano</b>
+          <span class="tiny muted">Pagos via PIX</span>
+        </div>
+
+        <div class="plan-grid">
+          <label class="plan">
+            <input type="radio" name="plan" value="free" checked />
+            <div class="plan__box">
+              <div class="plan__top">
+                <b>Gratuito</b>
+                <span class="pill2">R$ 0</span>
+              </div>
+              <div class="tiny muted">Conta limitada • sem pagamento</div>
+            </div>
+          </label>
+
+          <label class="plan">
+            <input type="radio" name="plan" value="premium_1m" />
+            <div class="plan__box">
+              <div class="plan__top">
+                <b>Premium</b>
+                <span class="pill2">1 mês</span>
+              </div>
+              <div class="tiny muted">Acesso completo • via PIX</div>
+            </div>
+          </label>
+
+          <label class="plan">
+            <input type="radio" name="plan" value="premium_3m" />
+            <div class="plan__box">
+              <div class="plan__top">
+                <b>Premium</b>
+                <span class="pill2">3 meses</span>
+              </div>
+              <div class="tiny muted">Melhor custo • via PIX</div>
+            </div>
+          </label>
+
+          <label class="plan">
+            <input type="radio" name="plan" value="premiumplus_1m" />
+            <div class="plan__box">
+              <div class="plan__top">
+                <b>Premium Plus</b>
+                <span class="pill2">1 mês</span>
+              </div>
+              <div class="tiny muted">Prioridade • via PIX</div>
+            </div>
+          </label>
+
+          <label class="plan">
+            <input type="radio" name="plan" value="premiumplus_2m" />
+            <div class="plan__box">
+              <div class="plan__top">
+                <b>Premium Plus</b>
+                <span class="pill2">2 meses</span>
+              </div>
+              <div class="tiny muted">Plus estendido • via PIX</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <button class="btn btn--primary btn--full" id="doRegister" type="button">Criar conta</button>
+      <p class="tiny muted" style="margin:10px 0 0;">* Mockup: plano pago redireciona para pagamento via PIX.</p>
+    </section>
+  </div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>

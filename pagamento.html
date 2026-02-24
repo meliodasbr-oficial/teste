@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagamento PIX | Aghamenon Toberlock Estudos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html#planos">
+      <span class="brand__mark">AT</span>
+      <span class="brand__name">Aghamenon Toberlock <span class="muted">Estudos</span></span>
+    </a>
+
+    <nav class="nav">
+      <a class="nav__link" href="index.html#planos">Voltar</a>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Alternar tema">
+        <span class="icon-btn__ic" aria-hidden="true">🌓</span>
+      </button>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile" id="mobileMenu" hidden>
+    <div class="container mobile__inner">
+      <a href="index.html#planos" class="mobile__link">Voltar</a>
+      <button class="mobile__link" id="themeToggleMobile" type="button">🌓 Alternar tema</button>
+    </div>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>Pagamento via PIX</h2>
+      <p class="muted">Escolha confirmada: <b id="planoNome">—</b></p>
+    </div>
+
+    <div class="grid-3" style="grid-template-columns: 1.2fr .8fr .8fr; gap:14px;">
+      <div class="card" style="grid-column: 1 / -1;">
+        <h3 style="margin:0 0 8px;">Instruções</h3>
+        <p class="muted" style="margin:0;">
+          Este é um mockup. Depois você substitui a chave/QR pela integração real do seu sistema.
+        </p>
+      </div>
+
+      <div class="card" style="grid-column: 1 / 2;">
+        <h3 style="margin:0 0 8px;">QR Code</h3>
+        <div style="border:1px solid var(--stroke); border-radius:18px; background: var(--card2); height: 240px; display:grid; place-items:center;">
+          <span class="muted">[ QR Placeholder ]</span>
+        </div>
+      </div>
+
+      <div class="card" style="grid-column: 2 / 4;">
+        <h3 style="margin:0 0 8px;">Chave PIX</h3>
+        <div class="field">
+          <label for="pixKey">Copiar chave</label>
+          <input id="pixKey" value="00020126360014BR.GOV.BCB.PIX0114+55XXXXXXXXXXX520400005303986540519.905802BR5920AGHAMENON TOBERLOCK6009SAO PAULO62070503***6304ABCD" readonly />
+        </div>
+        <button class="btn btn--primary" id="copyPix" type="button">Copiar</button>
+        <p class="tiny muted" id="copyMsg" style="margin:10px 0 0;"></p>
+
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn" href="index.html#planos">Voltar aos planos</a>
+          <a class="btn btn--ghost" href="index.html">Voltar para o início</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<button class="to-top" id="toTopBtn" type="button" aria-label="Voltar ao topo">↑</button>
+
+<script src="script.js"></script>
+<script>
+  // Mostra nome do plano pela querystring
+  const map = {
+    "premium_1m": "Premium • 1 mês",
+    "premium_3m": "Premium • 3 meses",
+    "premiumplus_1m": "Premium Plus • 1 mês",
+    "premiumplus_2m": "Premium Plus • 2 meses"
+  };
+  const p = new URLSearchParams(location.search).get("plano");
+  document.getElementById("planoNome").textContent = map[p] || "Plano não identificado";
+
+  const btn = document.getElementById("copyPix");
+  const key = document.getElementById("pixKey");
+  const msg = document.getElementById("copyMsg");
+  btn.addEventListener("click", async () => {
+    try{
+      await navigator.clipboard.writeText(key.value);
+      msg.textContent = "Chave PIX copiada!";
+    }catch(e){
+      msg.textContent = "Não foi possível copiar automaticamente. Selecione e copie manualmente.";
+    }
+  });
+</script>
+</body>
+</html>
